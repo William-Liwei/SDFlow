@@ -299,6 +299,13 @@ def train():
             
             model.eval()
             
+            # 0.001 is the dimensionless calibration factor alpha, not the
+            # final noise magnitude. The realized bandwidth is
+            # h = alpha * mean nearest-neighbor distance in U, and h is the
+            # per-coordinate standard deviation. Noise is added independently
+            # in all rank dimensions, so the expected radial perturbation is
+            # approximately h * sqrt(rank); therefore 0.001 alone should not
+            # be interpreted as universally small.
             kde = KDEPrior(model.U, device=device, bandwidth_factor=0.001)
             
             # Check U statistics
@@ -353,7 +360,7 @@ def train():
             # DS
             print("Computing DS...")
             ds_scores = []
-            for _ in range(3): 
+            for _ in range(5): 
                 ds = discriminative_score_metrics(real_timeseries, gen_timeseries)
                 ds_scores.append(ds)
             ds_mean = np.mean(ds_scores)
@@ -371,7 +378,7 @@ def train():
                 real_list = [real_timeseries[i].T for i in range(len(real_timeseries))]
                 gen_list = [gen_timeseries[i].T for i in range(len(gen_timeseries))]
                 pred = []
-                for _ in range(3):
+                for _ in range(5):
                     # pred_score = predictive_score_metrics(real_list, gen_list)
                     pred_score = predictive_score_metrics(real_timeseries, gen_timeseries)
                     pred.append(pred_score)
@@ -395,7 +402,7 @@ def train():
                 real_fid = np.transpose(real_timeseries, (0, 2, 1))
                 gen_fid = np.transpose(gen_timeseries, (0, 2, 1))
                 fid = []
-                for _ in range(3):
+                for _ in range(5):
                     fid_score = Context_FID(real_fid, gen_fid)
                     fid.append(fid_score)
                     msg = f"FID: {fid_score:.6f}"
