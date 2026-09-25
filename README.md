@@ -1,11 +1,15 @@
 # SDFlow: Similarity-Driven Flow Matching for Time Series Generation
 
-**Wei Li**$^{1,2,*}$, **Shibo Feng**$^{3,*}$, **Pengcheng Wu**$^{3}$, **Xingyu Gao**$^{4}$, **Min Wu**$^{5}$, **Peilin Zhao**$^{1,\dagger}$
+<p align="center">
+  <strong>Wei Li</strong><sup>1,2,*</sup>, <strong>Shibo Feng</strong><sup>3,*</sup>, <strong>Pengcheng Wu</strong><sup>3</sup>, <strong>Xingyu Gao</strong><sup>4</sup>, <strong>Min Wu</strong><sup>5</sup>, <strong>Peilin Zhao</strong><sup>1,†</sup>
+</p>
 
-$^{1}$Shanghai Jiao Tong University; $^{2}$Shanghai University; $^{3}$Nanyang Technological University; $^{4}$Chinese Academy of Sciences, Beijing; $^{5}$Institute for Infocomm Research, A*STAR, Singapore.
+<p align="center">
+  <sup>1</sup>Shanghai Jiao Tong University; <sup>2</sup>Shanghai University; <sup>3</sup>Nanyang Technological University;<br>
+  <sup>4</sup>Chinese Academy of Sciences, Beijing; <sup>5</sup>Institute for Infocomm Research, A*STAR, Singapore.
+</p>
 
-$^{*}$Equal contribution.  
-$^{\dagger}$Corresponding author.
+<p align="center"><sup>*</sup>Equal contribution. &nbsp; <sup>†</sup>Corresponding author.</p>
 
 To address exposure bias and high-dimensional representations in VQ-based discrete time-series generation, we propose SDFlow, a non-autoregressive flow-matching framework that explores low-rank manifold anchoring and discrete supervision. SDFlow enables efficient long-sequence generation and substantial inference acceleration while maintaining high fidelity. It achieves over 100x speedup compared with diffusion models, delivers more than an order-of-magnitude improvement in distribution quality over existing flow-based baselines on long-sequence tasks, and provides a 95% distribution-quality improvement and 3--10x speedup over the previous SDformer-ar model. SDFlow can support applications such as energy dispatch, financial simulation, and traffic monitoring, providing an efficient and reliable generative foundation for long-horizon trend forecasting and high-fidelity data augmentation.
 
