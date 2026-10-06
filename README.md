@@ -41,11 +41,29 @@ python -m stage2_flow.train_sdflow \
 
 ## Citation
 
+If SDFlow or our related work is useful to your research, please consider citing the relevant papers:
+
 ```bibtex
 @inproceedings{li2026sdflow,
   title     = {SDFlow: Similarity-Driven Flow Matching for Time Series Generation},
   author    = {Li, Wei and Feng, Shibo and Wu, Pengcheng and Gao, Xingyu and Wu, Min and Zhao, Peilin},
   booktitle = {Advances in Neural Information Processing Systems},
   year      = {2026}
+}
+
+@article{chen2024sdformer,
+  title   = {SDformer: Similarity-Driven Discrete Transformer for Time Series Generation},
+  author  = {Chen, Zhicheng and Feng, Shibo and Zhang, Zhong and Xiao, Xi and Gao, Xingyu and Zhao, Peilin},
+  journal = {Advances in Neural Information Processing Systems},
+  volume  = {37},
+  pages   = {132179--132207},
+  year    = {2024}
+}
+
+@article{feng2025msdformer,
+  title   = {MSDformer: Multi-Scale Discrete Transformer for Time Series Generation},
+  author  = {Feng, Shibo and Chen, Zhicheng and Xiao, Xi and Zhang, Zhong and Li, Qing and Gao, Xingyu and Zhao, Peilin},
+  journal = {arXiv preprint arXiv:2505.14202},
+  year    = {2025}
 }
 ```
